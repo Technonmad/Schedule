@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/mon"
+        android:title="Понедельник"
+        android:icon="@drawable/ic_baseline_book_24"/>
+    <item
+        android:id="@+id/tue"
+        android:title="Вторник"
+        android:icon="@drawable/ic_baseline_book_24"/>
+    <item
+        android:id="@+id/wed"
+        android:title="Среда"
+        android:icon="@drawable/ic_baseline_book_24"/>
+    <item
+        android:id="@+id/thur"
+        android:title="Четверг"
+        android:icon="@drawable/ic_baseline_book_24"/>
+    <item
+        android:id="@+id/fri"
+        android:title="Пятница"
+        android:icon="@drawable/ic_baseline_book_24"/>
+    <item
+        android:id="@+id/sat"
+        android:title="Суббота"
+        android:icon="@drawable/ic_baseline_book_24"/>
+
+</menu>

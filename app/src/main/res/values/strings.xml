@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">shlepa_schedule</string>
+    <string name="open">NavBar</string>
+    <string name="close">NavBar</string>
+</resources>
