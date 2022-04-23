@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 int id = item.getItemId();
 
-                if(id == R.id.mon) Toast.makeText(MainActivity.this, "Monday",Toast.LENGTH_SHORT).show();
+                if(id == R.id.kurs_1) Toast.makeText(MainActivity.this, "Monday",Toast.LENGTH_SHORT).show();
 
                 return true;
             }

@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Shlepa_schedule">
         <activity
+            android:name=".PickGroup"
+            android:exported="false" />
+        <activity
+            android:name=".Pick_direction"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>

@@ -2,28 +2,28 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/mon"
-        android:title="Понедельник"
+        android:id="@+id/kurs_1"
+        android:title="1 курс"
         android:icon="@drawable/ic_baseline_book_24"/>
     <item
-        android:id="@+id/tue"
-        android:title="Вторник"
+        android:id="@+id/kurs_2"
+        android:title="2 курс"
         android:icon="@drawable/ic_baseline_book_24"/>
     <item
-        android:id="@+id/wed"
-        android:title="Среда"
+        android:id="@+id/kurs_3"
+        android:title="3 курс"
         android:icon="@drawable/ic_baseline_book_24"/>
     <item
-        android:id="@+id/thur"
-        android:title="Четверг"
+        android:id="@+id/kurs_4"
+        android:title="4 курс"
         android:icon="@drawable/ic_baseline_book_24"/>
     <item
-        android:id="@+id/fri"
-        android:title="Пятница"
+        android:id="@+id/kp5"
+        android:title="КП 5 курс"
         android:icon="@drawable/ic_baseline_book_24"/>
     <item
-        android:id="@+id/sat"
-        android:title="Суббота"
+        android:id="@+id/maga"
+        android:title="Магистратура"
         android:icon="@drawable/ic_baseline_book_24"/>
 
 </menu>
