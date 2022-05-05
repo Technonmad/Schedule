@@ -10,10 +10,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Shlepa_schedule">
         <activity
-            android:name=".PickGroup"
+            android:name=".Schedule"
             android:exported="false" />
         <activity
-            android:name=".Pick_direction"
+            android:name=".Direction"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
@@ -25,5 +25,6 @@
             </intent-filter>
         </activity>
     </application>
+    <uses-permission android:name="android.permission.INTERNET"/>
 
 </manifest>
