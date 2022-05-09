@@ -2,6 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.shlepa_schedule">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -10,11 +14,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Shlepa_schedule">
         <activity
-            android:name=".Schedule"
+            android:name=".ScheduleActivity"
             android:exported="false" />
         <activity
-            android:name=".Direction"
-            android:exported="false" />
+            android:name=".PickCourseName"
+            android:exported="true"></activity>
         <activity
             android:name=".MainActivity"
             android:exported="true">
@@ -25,6 +29,5 @@
             </intent-filter>
         </activity>
     </application>
-    <uses-permission android:name="android.permission.INTERNET"/>
 
 </manifest>
