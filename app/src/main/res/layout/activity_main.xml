@@ -1,120 +1,68 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:orientation="vertical"
-    android:gravity="center">
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Выберите нужный курс"
-        android:textColor="@color/black"
-        android:textAlignment="center"
-        android:textSize="12pt"
-        android:layout_marginBottom="10dp"/>
+    tools:context=".MainActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="center">
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
 
-        <ImageButton
-            android:id="@+id/kurs_1"
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/direction_text"
+                android:textColor="@color/black"
+                android:textSize="17sp"
+                android:id="@+id/direction_text"/>
+
+            <Spinner
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/direction"
+                android:layout_marginLeft="16dp"
+                android:entries="@array/direction_spinner"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/group_text"
+                android:textColor="@color/black"
+                android:textSize="17sp"
+                android:id="@+id/group_text"/>
+
+            <Spinner
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/group"
+                android:layout_margin="16dp"/>
+
+        </LinearLayout>
+
+        <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginRight="5dp"
-            android:onClick="onClick"
-            android:src="@drawable/kurs1"
-            android:background="@android:color/transparent"/>
-        <ImageButton
-            android:id="@+id/kurs_2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="5dp"
-            android:onClick="onClick"
-            android:src="@drawable/kurs2"
-            android:background="@android:color/transparent"/>
-        <ImageButton
-            android:id="@+id/kurs_3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="5dp"
-            android:onClick="onClick"
-            android:src="@drawable/kurs3"
-            android:background="@android:color/transparent"/>
-        <ImageButton
-            android:id="@+id/kurs_4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:onClick="onClick"
-            android:src="@drawable/kurs4"
-            android:background="@android:color/transparent"/>
+            android:text="@string/button_text"
+            android:id="@+id/btn"/>
+
     </LinearLayout>
 
-    <com.google.android.material.divider.MaterialDivider
-        android:layout_width="match_parent"
-        android:layout_height="10dp"
-        android:layout_marginTop="10dp"/>
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="И направление"
-        android:textColor="@color/black"
-        android:textAlignment="center"
-        android:textSize="12pt"
-        android:layout_marginBottom="10dp"/>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="center">
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_marginEnd="30dp"
-            style="?buttonBarButtonStyle"
-            android:text="ФСГН"
-            android:onClick="onClick"/>
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            style="?buttonBarButtonStyle"
-            android:text="ИСАУ"/>
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="center">
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_marginEnd="30dp"
-            style="?buttonBarButtonStyle"
-            android:text="ИФИ"/>
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            style="?buttonBarButtonStyle"
-            android:text="ФЕИН"/>
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center">
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Показать"
-            android:onClick="onClick"/>
-    </LinearLayout>
-
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

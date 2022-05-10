@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "228384142842",
+    "project_id": "schedule-f10b3",
+    "storage_bucket": "schedule-f10b3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:228384142842:android:6fc7fcba32a0926e58e043",
+        "android_client_info": {
+          "package_name": "com.example.uniDubnaSchedule"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "228384142842-2bj2p3qcidpt6beje42j61cdllp98d3a.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB0absBEAha9LILx_u31QlvSZ1DZpNA9G4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "228384142842-2bj2p3qcidpt6beje42j61cdllp98d3a.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

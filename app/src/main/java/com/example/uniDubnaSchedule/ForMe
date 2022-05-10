@@ -8,4 +8,6 @@ setTitle() меняет текст в баре сверху
 Intent intent = new Intent(this, PickCourseName.class);
         startActivity(intent);
 
+Столбец _id обязателен для корректной работы с таблицей
 
+Для DAO используем либо ORMLite либо GreenDAO

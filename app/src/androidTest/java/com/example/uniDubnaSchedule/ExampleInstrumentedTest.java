@@ -1,4 +1,4 @@
-package com.example.shlepa_schedule;
+package com.example.uniDubnaSchedule;
 
 import android.content.Context;
 
