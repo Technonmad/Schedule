@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">UDSchedule</string>
     <string name="direction_text">Выберите направление</string>
+    <string name="year_text">Выберите курс</string>
     <string-array name="direction_spinner">
         <item>ФСГН</item>
         <item>ИСАУ</item>

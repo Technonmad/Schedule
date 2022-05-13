@@ -1,4 +1,4 @@
-package com.example.udschedule
+package com.example.scheduleuni
 
 import org.junit.Test
 

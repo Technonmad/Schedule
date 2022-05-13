@@ -1,15 +1,16 @@
 {
   "project_info": {
     "project_number": "228384142842",
+    "firebase_url": "https://schedule-f10b3-default-rtdb.europe-west1.firebasedatabase.app",
     "project_id": "schedule-f10b3",
     "storage_bucket": "schedule-f10b3.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:228384142842:android:6fc7fcba32a0926e58e043",
+        "mobilesdk_app_id": "1:228384142842:android:37150eb5f80188dc58e043",
         "android_client_info": {
-          "package_name": "com.example.uniDubnaSchedule"
+          "package_name": "com.example.scheduleuni"
         }
       },
       "oauth_client": [
