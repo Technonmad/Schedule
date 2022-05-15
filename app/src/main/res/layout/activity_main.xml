@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".presentation.MainActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -43,18 +43,19 @@
             android:layout_marginTop="16dp">
 
             <TextView
+                android:id="@+id/year_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/year_text"
                 android:textColor="@color/black"
-                android:textSize="17sp"
-                android:id="@+id/year_text"/>
+                android:textSize="17sp" />
 
             <Spinner
+                android:id="@+id/year"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/year"
-                android:layout_marginLeft="16dp"/>
+                android:entries="@array/year_spinner"
+                android:layout_marginLeft="85dp"/>
 
         </LinearLayout>
 
@@ -62,7 +63,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:gravity="center">
+            android:gravity="center"
+            android:layout_marginTop="5dp">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -76,7 +78,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/group"
-                android:layout_margin="16dp"/>
+                android:layout_marginLeft="77dp"/>
 
         </LinearLayout>
 
@@ -84,7 +86,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/button_text"
-            android:id="@+id/btn"/>
+            android:id="@+id/btn"
+            android:layout_marginTop="16dp"/>
 
     </LinearLayout>
 
