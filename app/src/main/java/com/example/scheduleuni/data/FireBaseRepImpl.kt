@@ -20,6 +20,7 @@ class FireBaseRepImpl : Repository {
 
         ref.addValueEventListener(object : ValueEventListener{
             override fun onDataChange(snapshot: DataSnapshot) {
+                list.clear()
                 for (mydata: DataSnapshot in snapshot.children)
                     list.add(mydata.value.toString())
                 adapter.notifyDataSetChanged()

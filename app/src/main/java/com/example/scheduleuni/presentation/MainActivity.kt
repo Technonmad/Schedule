@@ -21,11 +21,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-    }
-
-    override fun onResume() {
-        super.onResume()
-
         var repository = FireBaseRepImpl()
         var yearSpinner = findViewById<Spinner>(R.id.year)
         var directionSpinner = findViewById<Spinner>(R.id.direction)
@@ -35,7 +30,6 @@ class MainActivity : AppCompatActivity() {
 
         fun updateGroupSpinner(spinner_direction: Spinner, spinner_year:Spinner){
             var getGroups = GetGroupsUseCase(repository)
-            dataArray.clear()
             var param = GroupData(spinner_direction.selectedItem.toString(), spinner_year.selectedItem.toString())
             getGroups.execute(dataArray, dataAdapter, param)
             groupSpinner.adapter = dataAdapter
@@ -45,6 +39,7 @@ class MainActivity : AppCompatActivity() {
         yearSpinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener{
             override fun onItemSelected(p0: AdapterView<*>?, p1: View?, p2: Int, p3: Long) {
                 updateGroupSpinner(directionSpinner,yearSpinner)
+                Log.i("ME", "TATA")
             }
 
             override fun onNothingSelected(p0: AdapterView<*>?) {
@@ -56,6 +51,7 @@ class MainActivity : AppCompatActivity() {
         directionSpinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener{
             override fun onItemSelected(p0: AdapterView<*>?, p1: View?, p2: Int, p3: Long) {
                 updateGroupSpinner(directionSpinner,yearSpinner)
+                Log.i("ME", "TATA")
             }
 
             override fun onNothingSelected(p0: AdapterView<*>?) {
@@ -70,8 +66,6 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, ScheduleActivity::class.java)
             startActivity(intent)
         }
-
-
 
     }
 

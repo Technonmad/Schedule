@@ -64,7 +64,7 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:gravity="center"
-            android:layout_marginTop="5dp">
+            android:layout_marginTop="16dp">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -78,7 +78,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/group"
-                android:layout_marginLeft="77dp"/>
+                android:layout_marginLeft="75dp"/>
 
         </LinearLayout>
 
