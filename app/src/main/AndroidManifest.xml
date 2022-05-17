@@ -10,10 +10,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ScheduleUni">
         <activity
-            android:name=".presentation.ScheduleActivity"
+            android:name=".presentation.activities.ScheduleActivity"
             android:exported="false" />
         <activity
-            android:name=".presentation.MainActivity"
+            android:name=".presentation.activities.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

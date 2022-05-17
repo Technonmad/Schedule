@@ -1,5 +1,6 @@
 package com.example.scheduleuni.data
 
+import android.provider.ContactsContract
 import android.widget.ArrayAdapter
 import com.example.scheduleuni.domain.Repository
 import com.example.scheduleuni.domain.models.GroupData

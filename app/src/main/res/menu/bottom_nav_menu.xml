@@ -10,4 +10,9 @@
         android:icon="@drawable/ic_me"
         android:title="Задания"
         android:id="@+id/tasks_item"/>
+    <item
+        android:enabled="true"
+        android:icon="@drawable/ic_me"
+        android:title="Настройки"
+        android:id="@+id/settings_item"/>
 </menu>
