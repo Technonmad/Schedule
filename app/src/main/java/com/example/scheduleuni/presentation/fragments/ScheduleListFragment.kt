@@ -38,8 +38,9 @@ class ScheduleListFragment : Fragment() {
             classesRec.layoutManager = LinearLayoutManager(this@ScheduleListFragment.context)
             classesRec.adapter = adapter_classes
             val cl = ClassModel(
+                group = "",
                 dayofweek = "Тяжелый день",
-                auditory = "1-415",
+                auditory = arguments?.get("group_name").toString(),
                 cl_name = "Очень важная пара",
                 prim = "Переделывай")
             adapter_classes.addClass(cl)

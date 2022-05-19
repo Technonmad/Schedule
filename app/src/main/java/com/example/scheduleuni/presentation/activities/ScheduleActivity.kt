@@ -1,21 +1,25 @@
 package com.example.scheduleuni.presentation.activities
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.example.scheduleuni.R
 import com.example.scheduleuni.databinding.ActivityScheduleBinding
 import com.example.scheduleuni.presentation.fragments.ScheduleListFragment
-
-import com.example.scheduleuni.presentation.TasksFragment
 import com.example.scheduleuni.presentation.fragments.SettingsFragment
+import com.example.scheduleuni.presentation.fragments.TasksFragment
 
 class ScheduleActivity : AppCompatActivity() {
 
     lateinit var binding : ActivityScheduleBinding
+    var bundle = Bundle()
+    var group = ""
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        group = intent.extras?.get("group_name").toString()
+        //Log.i("MY", group.toString())
 
         binding = ActivityScheduleBinding.inflate(layoutInflater)
         setContentView(binding.root)
@@ -35,6 +39,9 @@ class ScheduleActivity : AppCompatActivity() {
     }
 
     private fun loadFragment(fragment: Fragment) {
+        bundle.putString("group_name", group)
+        //Log.i("MY", bundle.toString())
+        fragment.arguments = bundle
         supportFragmentManager
             .beginTransaction()
             .replace(R.id.container, fragment)
