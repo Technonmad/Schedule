@@ -1,9 +1,9 @@
 package com.example.scheduleuni.data
 
-import android.provider.ContactsContract
 import android.widget.ArrayAdapter
+import com.example.scheduleuni.domain.ClassesAdapter
 import com.example.scheduleuni.domain.Repository
-import com.example.scheduleuni.domain.models.ClassModel
+import com.example.scheduleuni.domain.models.ClassesModel
 import com.example.scheduleuni.domain.models.GroupData
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
@@ -25,12 +25,26 @@ class FireBaseRepImpl : Repository {
     }
 
 
-    override fun getClasses(list: ArrayList<String>, adapter: ArrayAdapter<String>,
-                            params: ClassModel) {
+    override fun getClasses(list: ArrayList<ClassesModel>, adapter: ClassesAdapter,
+                            /*params: ClassesModel, */group: String) {
 
-        val day = database.getReference("Schedule").child(params.group).child(params.dayofweek)
+        val day = database.getReference("Schedule").child(group)
 
-        listener(day, list, adapter)
+        day.addValueEventListener(object : ValueEventListener{
+            override fun onDataChange(snapshot: DataSnapshot) {
+                list.clear()
+                for (mydata: DataSnapshot in snapshot.children){
+                    val classes = mydata.getValue(ClassesModel::class.java)
+                    list.add(classes!!)
+                }
+                adapter.notifyDataSetChanged()
+            }
+
+            override fun onCancelled(error: DatabaseError) {
+                TODO("Not yet implemented")
+            }
+
+        })
 
     }
 

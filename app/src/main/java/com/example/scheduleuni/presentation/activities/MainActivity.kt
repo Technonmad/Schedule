@@ -11,7 +11,7 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.example.scheduleuni.R
 import com.example.scheduleuni.databinding.ActivityMainBinding
-import com.example.scheduleuni.presentation.factories.ViewModelFactory
+import com.example.scheduleuni.presentation.factories.MainViewModelFactory
 import com.example.scheduleuni.presentation.viewmodels.ViewModelMain
 
 class MainActivity : AppCompatActivity() {
@@ -24,7 +24,7 @@ class MainActivity : AppCompatActivity() {
         val view = binding.root
         setContentView(view)
 
-        val vm = ViewModelProvider(this, ViewModelFactory()).get(ViewModelMain::class.java)
+        val vm = ViewModelProvider(this, MainViewModelFactory()).get(ViewModelMain::class.java)
         val dataAdapter = ArrayAdapter<String>(applicationContext,
             android.R.layout.simple_spinner_dropdown_item, vm.dataArray)
 

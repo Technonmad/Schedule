@@ -6,19 +6,27 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.scheduleuni.R
 import com.example.scheduleuni.databinding.ClassItemBinding
-import com.example.scheduleuni.domain.models.ClassModel
+import com.example.scheduleuni.domain.models.ClassesModel
 
 class ClassesAdapter: RecyclerView.Adapter<ClassesAdapter.ClassHolder>() {
 
-    private val classList = ArrayList<ClassModel>()
+    private val classList = ArrayList<ClassesModel>()
 
     class ClassHolder(item: View): RecyclerView.ViewHolder(item) {
-        val binding = ClassItemBinding.bind(item)
-        fun bind(cl: ClassModel) = with(binding){
+        private val binding = ClassItemBinding.bind(item)
+        fun bind(cl: ClassesModel) = with(binding){
             dayofweekText.text = cl.dayofweek
-            classAud.text = cl.auditory
-            className.text = cl.cl_name
-            classPrim.text = cl.prim
+            classAud1.text = cl.room1
+            className1.text = cl.class1
+            classAud2.text = cl.room2
+            className2.text = cl.class2
+            classAud3.text = cl.room3
+            className3.text = cl.class3
+            classAud4.text = cl.room4
+            className4.text = cl.class4
+            classAud5.text = cl.room5
+            className5.text = cl.class5
+            //classPrim1.text = cl.prim
         }
     }
 
@@ -35,7 +43,7 @@ class ClassesAdapter: RecyclerView.Adapter<ClassesAdapter.ClassHolder>() {
         return classList.size
     }
 
-    fun addClass(cl: ClassModel) {
+    fun addClass(cl: ClassesModel) {
         classList.add(cl)
         notifyDataSetChanged()
     }
