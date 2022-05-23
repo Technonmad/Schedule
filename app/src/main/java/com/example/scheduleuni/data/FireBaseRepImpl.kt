@@ -1,8 +1,8 @@
 package com.example.scheduleuni.data
 
 import android.widget.ArrayAdapter
-import com.example.scheduleuni.domain.ClassesAdapter
-import com.example.scheduleuni.domain.Repository
+import com.example.scheduleuni.domain.adapters.ClassesAdapter
+import com.example.scheduleuni.domain.interfaces.Repository
 import com.example.scheduleuni.domain.models.ClassesModel
 import com.example.scheduleuni.domain.models.GroupData
 import com.google.firebase.database.DataSnapshot

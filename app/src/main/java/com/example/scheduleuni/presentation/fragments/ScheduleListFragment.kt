@@ -9,8 +9,6 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.scheduleuni.databinding.FragmentScheduleListBinding
-import com.example.scheduleuni.domain.ClassesAdapter
-import com.example.scheduleuni.domain.models.ClassesModel
 import com.example.scheduleuni.presentation.factories.ScheduleFragmentViewModelFactory
 import com.example.scheduleuni.presentation.viewmodels.ViewModelScheduleFragment
 
@@ -33,7 +31,7 @@ class ScheduleListFragment : Fragment() {
         })
         binding.apply {
             classesRec.layoutManager = LinearLayoutManager(this@ScheduleListFragment.context)
-            vm.getScheduleForGroup()
+            vm.getScheduleForGroup(arguments?.get("group_name").toString())
         }
         return view
     }

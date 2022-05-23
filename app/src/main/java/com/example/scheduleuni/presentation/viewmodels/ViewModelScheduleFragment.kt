@@ -4,7 +4,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.scheduleuni.data.FireBaseRepImpl
-import com.example.scheduleuni.domain.ClassesAdapter
+import com.example.scheduleuni.domain.adapters.ClassesAdapter
 import com.example.scheduleuni.domain.models.ClassesModel
 import com.example.scheduleuni.domain.usecase.GetClassesUseCase
 
@@ -17,11 +17,11 @@ class ViewModelScheduleFragment: ViewModel() {
     var repository = FireBaseRepImpl()
     var dataArray = ArrayList<ClassesModel>()
 
-    fun getScheduleForGroup(){
+    fun getScheduleForGroup(group: String){
 
         var getClasses = GetClassesUseCase(repository)
         var dataAdapter = ClassesAdapter(dataArray)
-        getClasses.execute(dataArray, dataAdapter, "1011")
+        getClasses.execute(dataArray, dataAdapter, group)
         liveData.value = dataAdapter
 
     }

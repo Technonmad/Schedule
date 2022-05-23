@@ -1,7 +1,7 @@
 package com.example.scheduleuni.domain.usecase
 
-import com.example.scheduleuni.domain.ClassesAdapter
-import com.example.scheduleuni.domain.Repository
+import com.example.scheduleuni.domain.adapters.ClassesAdapter
+import com.example.scheduleuni.domain.interfaces.Repository
 import com.example.scheduleuni.domain.models.ClassesModel
 
 class GetClassesUseCase(private val repository: Repository) {

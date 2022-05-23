@@ -2,17 +2,17 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:enabled="true"
-        android:icon="@drawable/ic_me"
+        android:icon="@drawable/schedule_icon_foreground"
         android:title="Расписание"
         android:id="@+id/schedule_item"/>
     <item
         android:enabled="true"
-        android:icon="@drawable/ic_me"
+        android:icon="@drawable/tasks_icon_foreground"
         android:title="Задания"
         android:id="@+id/tasks_item"/>
     <item
         android:enabled="true"
-        android:icon="@drawable/ic_me"
+        android:icon="@drawable/settings_icon_foreground"
         android:title="Настройки"
         android:id="@+id/settings_item"/>
 </menu>

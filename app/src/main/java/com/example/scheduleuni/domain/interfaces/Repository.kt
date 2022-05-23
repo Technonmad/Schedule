@@ -1,6 +1,7 @@
-package com.example.scheduleuni.domain
+package com.example.scheduleuni.domain.interfaces
 
 import android.widget.ArrayAdapter
+import com.example.scheduleuni.domain.adapters.ClassesAdapter
 import com.example.scheduleuni.domain.models.ClassesModel
 import com.example.scheduleuni.domain.models.GroupData
 

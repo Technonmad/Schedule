@@ -1,4 +1,4 @@
-package com.example.scheduleuni.domain
+package com.example.scheduleuni.domain.adapters
 
 import android.view.LayoutInflater
 import android.view.View
