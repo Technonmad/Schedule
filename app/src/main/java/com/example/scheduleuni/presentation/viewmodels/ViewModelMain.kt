@@ -2,6 +2,7 @@ package com.example.scheduleuni.presentation.viewmodels
 
 import android.R
 import android.widget.ArrayAdapter
+import android.widget.AutoCompleteTextView
 import android.widget.Spinner
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
@@ -20,9 +21,9 @@ class ViewModelMain: ViewModel() {
     var repository = FireBaseRepImpl()
     var dataArray = ArrayList<String>()
 
-    fun updateGroupSpinner(spinner_direction: Spinner, spinner_year: Spinner, dataAdapter: ArrayAdapter<String>) {
+    fun updateGroupSpinner(spinner_direction: AutoCompleteTextView, spinner_year: AutoCompleteTextView, dataAdapter: ArrayAdapter<String>) {
         var getGroups = GetGroupsUseCase(repository)
-        var param = GroupData(spinner_direction.selectedItem.toString(), spinner_year.selectedItem.toString())
+        var param = GroupData(spinner_direction.text.toString(), spinner_year.text.toString())
         getGroups.execute(dataArray, dataAdapter, param)
         liveData.value = dataAdapter
     }

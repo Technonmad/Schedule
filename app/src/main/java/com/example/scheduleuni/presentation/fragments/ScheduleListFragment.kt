@@ -26,13 +26,16 @@ class ScheduleListFragment : Fragment() {
         _binding = FragmentScheduleListBinding.inflate(inflater, container, false)
         val view = binding.root
         val vm = ViewModelProvider(this, ScheduleFragmentViewModelFactory()).get(ViewModelScheduleFragment::class.java)
-        vm.publicLiveData.observe(viewLifecycleOwner, Observer {
+        vm.publicLiveDataSchedule.observe(viewLifecycleOwner, Observer {
             binding.classesRec.adapter = it
         })
         binding.apply {
             classesRec.layoutManager = LinearLayoutManager(this@ScheduleListFragment.context)
-            vm.getScheduleForGroup(arguments?.get("group_name").toString())
+            vm.getScheduleForGroup()
         }
+        val data = arguments
+        binding.currentGroup.text = " " + data!!.get("group_name").toString()
+        binding.currentWeek.text = " " + vm.getCurrentWeek()
         return view
     }
 

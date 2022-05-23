@@ -2,13 +2,17 @@
     <string name="app_name">UDSchedule</string>
     <string name="direction_text">Выберите направление</string>
     <string name="year_text">Выберите курс</string>
+    <string name="current_group_schedule">Текущая группа : </string>
+    <string name="current_week_schedule">Текущая неделя : </string>
     <string-array name="direction_spinner">
+        <item></item>
         <item>ФСГН</item>
         <item>ИСАУ</item>
         <item>ИФИ</item>
         <item>ФЕИН</item>
     </string-array>
     <string-array name="year_spinner">
+        <item></item>
         <item>1 курс</item>
         <item>2 курс</item>
         <item>3 курс</item>

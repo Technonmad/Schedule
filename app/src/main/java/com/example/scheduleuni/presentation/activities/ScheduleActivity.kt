@@ -31,6 +31,7 @@ class ScheduleActivity : AppCompatActivity() {
             }
             true
         }
+
     }
 
     override fun onStart() {
@@ -42,6 +43,7 @@ class ScheduleActivity : AppCompatActivity() {
         bundle.putString("group_name", group)
         //Log.i("MY", bundle.toString())
         fragment.arguments = bundle
+
         supportFragmentManager
             .beginTransaction()
             .replace(R.id.container, fragment)

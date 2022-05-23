@@ -1,7 +1,7 @@
 package com.example.scheduleuni.domain.usecase
 
 import android.widget.ArrayAdapter
-import com.example.scheduleuni.domain.interfaces.Repository
+import com.example.scheduleuni.domain.repository.Repository
 import com.example.scheduleuni.domain.models.GroupData
 
 class GetGroupsUseCase(private val repository: Repository) {

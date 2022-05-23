@@ -1,4 +1,4 @@
-package com.example.scheduleuni.domain.interfaces
+package com.example.scheduleuni.domain.repository
 
 import android.widget.ArrayAdapter
 import com.example.scheduleuni.domain.adapters.ClassesAdapter
