@@ -8,9 +8,8 @@ import com.example.scheduleuni.R
 import com.example.scheduleuni.databinding.ClassItemBinding
 import com.example.scheduleuni.domain.models.ClassesModel
 
-class ClassesAdapter: RecyclerView.Adapter<ClassesAdapter.ClassHolder>() {
+class ClassesAdapter(private val classesList: ArrayList<ClassesModel>): RecyclerView.Adapter<ClassesAdapter.ClassHolder>() {
 
-    private val classList = ArrayList<ClassesModel>()
 
     class ClassHolder(item: View): RecyclerView.ViewHolder(item) {
         private val binding = ClassItemBinding.bind(item)
@@ -26,7 +25,8 @@ class ClassesAdapter: RecyclerView.Adapter<ClassesAdapter.ClassHolder>() {
             className4.text = cl.class4
             classAud5.text = cl.room5
             className5.text = cl.class5
-            //classPrim1.text = cl.prim
+            classAud6.text = cl.room6
+            className6.text = cl.class6
         }
     }
 
@@ -36,15 +36,11 @@ class ClassesAdapter: RecyclerView.Adapter<ClassesAdapter.ClassHolder>() {
     }
 
     override fun onBindViewHolder(holder: ClassHolder, position: Int) {
-        holder.bind(cl = classList[position])
+        holder.bind(cl = classesList[position])
     }
 
     override fun getItemCount(): Int {
-        return classList.size
+        return classesList.size
     }
 
-    fun addClass(cl: ClassesModel) {
-        classList.add(cl)
-        notifyDataSetChanged()
-    }
 }

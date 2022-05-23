@@ -19,7 +19,6 @@ class ScheduleListFragment : Fragment() {
 
     private var _binding: FragmentScheduleListBinding? = null
     private val binding get() = _binding!!
-    private val adapter_classes = ClassesAdapter()
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -29,21 +28,12 @@ class ScheduleListFragment : Fragment() {
         _binding = FragmentScheduleListBinding.inflate(inflater, container, false)
         val view = binding.root
         val vm = ViewModelProvider(this, ScheduleFragmentViewModelFactory()).get(ViewModelScheduleFragment::class.java)
-        //init()
         vm.publicLiveData.observe(viewLifecycleOwner, Observer {
             binding.classesRec.adapter = it
         })
         binding.apply {
             classesRec.layoutManager = LinearLayoutManager(this@ScheduleListFragment.context)
-            /*val cl = ClassesModel(
-                //group = "",
-                dayofweek = "Тяжелый день",
-                // = arguments?.get("group_name").toString(),
-                cl_name = "Очень важная пара",
-                prim = "Переделывай")*/
-            vm.getScheduleForGroup(/*cl, */adapter_classes)
-            classesRec.adapter = adapter_classes
-            //adapter_classes.addClass(cl)
+            vm.getScheduleForGroup()
         }
         return view
     }
@@ -52,21 +42,5 @@ class ScheduleListFragment : Fragment() {
         super.onDestroyView()
         _binding = null
     }
-
-//    private fun init() {
-//        val vm = ViewModelProvider(this, /*ViewModelFactory()*/).get(ViewModelScheduleFragment::class.java)
-//        binding.apply {
-//            classesRec.layoutManager = LinearLayoutManager(this@ScheduleListFragment.context)
-//            classesRec.adapter = adapter_classes
-//            val cl = ClassesModel(
-//                //group = "",
-//                dayofweek = "Тяжелый день",
-//                auditory = arguments?.get("group_name").toString(),
-//                cl_name = "Очень важная пара",
-//                prim = "Переделывай")
-//            vm.getScheduleForGroup(cl, adapter_classes)
-//            //adapter_classes.addClass(cl)
-//        }
-//    }
 
 }

@@ -21,10 +21,10 @@
         android:layout_marginTop="10dp">
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="80dp"
             android:layout_height="wrap_content"
             android:id="@+id/class_aud1"
-            android:text="1-415"
+            android:text="----"
             android:layout_weight="1"
             android:textAlignment="center"
             android:textSize="16sp"
@@ -34,10 +34,10 @@
             android:layout_height="fill_parent"
             android:background="@android:color/holo_blue_dark" />
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:id="@+id/class_name1"
-            android:text="Супер важная пара"
+            android:text="----"
             android:layout_weight="5"
             android:textAlignment="center"
             android:textSize="16sp"
@@ -47,10 +47,10 @@
             android:layout_height="fill_parent"
             android:background="@android:color/holo_blue_dark" />
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="60dp"
             android:layout_height="wrap_content"
             android:id="@+id/class_prim1"
-            android:text="Примечание"
+            android:text="----"
             android:layout_weight="3"
             android:textAlignment="center"
             android:textSize="16sp"
@@ -64,10 +64,10 @@
         android:layout_marginTop="10dp">
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="80dp"
             android:layout_height="wrap_content"
             android:id="@+id/class_aud2"
-            android:text="1-415"
+            android:text="----"
             android:layout_weight="1"
             android:textAlignment="center"
             android:textSize="16sp"
@@ -77,10 +77,10 @@
             android:layout_height="fill_parent"
             android:background="@android:color/holo_blue_dark" />
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:id="@+id/class_name2"
-            android:text="Супер важная пара"
+            android:text="----"
             android:layout_weight="5"
             android:textAlignment="center"
             android:textSize="16sp"
@@ -90,10 +90,10 @@
             android:layout_height="fill_parent"
             android:background="@android:color/holo_blue_dark" />
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="60dp"
             android:layout_height="wrap_content"
             android:id="@+id/class_prim2"
-            android:text="Примечание"
+            android:text="----"
             android:layout_weight="3"
             android:textAlignment="center"
             android:textSize="16sp"
@@ -107,10 +107,10 @@
         android:layout_marginTop="10dp">
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="80dp"
             android:layout_height="wrap_content"
             android:id="@+id/class_aud3"
-            android:text="1-415"
+            android:text="----"
             android:layout_weight="1"
             android:textAlignment="center"
             android:textSize="16sp"
@@ -120,10 +120,10 @@
             android:layout_height="fill_parent"
             android:background="@android:color/holo_blue_dark" />
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:id="@+id/class_name3"
-            android:text="Супер важная пара"
+            android:text="----"
             android:layout_weight="5"
             android:textAlignment="center"
             android:textSize="16sp"
@@ -133,10 +133,10 @@
             android:layout_height="fill_parent"
             android:background="@android:color/holo_blue_dark" />
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="60dp"
             android:layout_height="wrap_content"
             android:id="@+id/class_prim3"
-            android:text="Примечание"
+            android:text="----"
             android:layout_weight="3"
             android:textAlignment="center"
             android:textSize="16sp"
@@ -150,10 +150,10 @@
         android:layout_marginTop="10dp">
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="80dp"
             android:layout_height="wrap_content"
             android:id="@+id/class_aud4"
-            android:text="1-415"
+            android:text="----"
             android:layout_weight="1"
             android:textAlignment="center"
             android:textSize="16sp"
@@ -163,10 +163,10 @@
             android:layout_height="fill_parent"
             android:background="@android:color/holo_blue_dark" />
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:id="@+id/class_name4"
-            android:text="Супер важная пара"
+            android:text="----"
             android:layout_weight="5"
             android:textAlignment="center"
             android:textSize="16sp"
@@ -176,10 +176,10 @@
             android:layout_height="fill_parent"
             android:background="@android:color/holo_blue_dark" />
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="60dp"
             android:layout_height="wrap_content"
             android:id="@+id/class_prim4"
-            android:text="Примечание"
+            android:text="----"
             android:layout_weight="3"
             android:textAlignment="center"
             android:textSize="16sp"
@@ -193,10 +193,10 @@
         android:layout_marginTop="10dp">
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="80dp"
             android:layout_height="wrap_content"
             android:id="@+id/class_aud5"
-            android:text="1-415"
+            android:text="----"
             android:layout_weight="1"
             android:textAlignment="center"
             android:textSize="16sp"
@@ -206,10 +206,10 @@
             android:layout_height="fill_parent"
             android:background="@android:color/holo_blue_dark" />
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:id="@+id/class_name5"
-            android:text="Супер важная пара"
+            android:text="----"
             android:layout_weight="5"
             android:textAlignment="center"
             android:textSize="16sp"
@@ -219,10 +219,10 @@
             android:layout_height="fill_parent"
             android:background="@android:color/holo_blue_dark" />
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="60dp"
             android:layout_height="wrap_content"
             android:id="@+id/class_prim5"
-            android:text="Примечание"
+            android:text="----"
             android:layout_weight="3"
             android:textAlignment="center"
             android:textSize="16sp"
@@ -236,10 +236,10 @@
         android:layout_marginTop="10dp">
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="80dp"
             android:layout_height="wrap_content"
             android:id="@+id/class_aud6"
-            android:text="1-415"
+            android:text="----"
             android:layout_weight="1"
             android:textAlignment="center"
             android:textSize="16sp"
@@ -249,10 +249,10 @@
             android:layout_height="fill_parent"
             android:background="@android:color/holo_blue_dark" />
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:id="@+id/class_name6"
-            android:text="Супер важная пара"
+            android:text="----"
             android:layout_weight="5"
             android:textAlignment="center"
             android:textSize="16sp"
@@ -262,10 +262,10 @@
             android:layout_height="fill_parent"
             android:background="@android:color/holo_blue_dark" />
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="60dp"
             android:layout_height="wrap_content"
             android:id="@+id/class_prim6"
-            android:text="Примечание"
+            android:text="----"
             android:layout_weight="3"
             android:textAlignment="center"
             android:textSize="16sp"

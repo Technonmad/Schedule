@@ -25,10 +25,9 @@ class FireBaseRepImpl : Repository {
     }
 
 
-    override fun getClasses(list: ArrayList<ClassesModel>, adapter: ClassesAdapter,
-                            /*params: ClassesModel, */group: String) {
+    override fun getClasses(list: ArrayList<ClassesModel>, adapter: ClassesAdapter, group: String) {
 
-        val day = database.getReference("Schedule").child(group)
+        val day = database.getReference("Schedule").child(group).orderByChild("sortKey")
 
         day.addValueEventListener(object : ValueEventListener{
             override fun onDataChange(snapshot: DataSnapshot) {

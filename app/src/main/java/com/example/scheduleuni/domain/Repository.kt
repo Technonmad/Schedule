@@ -9,6 +9,5 @@ interface Repository {
     fun getGroupsList(list: ArrayList<String>, adapter: ArrayAdapter<String>,
                       params: GroupData)
 
-    fun getClasses(list: ArrayList<ClassesModel>, adapter: ClassesAdapter,
-                   /*params: ClassesModel, */group: String)
+    fun getClasses(list: ArrayList<ClassesModel>, adapter: ClassesAdapter, group: String)
 }

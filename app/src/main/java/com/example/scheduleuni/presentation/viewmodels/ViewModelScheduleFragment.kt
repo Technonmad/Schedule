@@ -17,20 +17,13 @@ class ViewModelScheduleFragment: ViewModel() {
     var repository = FireBaseRepImpl()
     var dataArray = ArrayList<ClassesModel>()
 
-    fun getScheduleForGroup(/*cl: ClassesModel, */dataAdapter: ClassesAdapter){
+    fun getScheduleForGroup(){
 
         var getClasses = GetClassesUseCase(repository)
-        //var classes_data = cl
-        getClasses.execute(dataArray, dataAdapter, /*cl, */"1011")
+        var dataAdapter = ClassesAdapter(dataArray)
+        getClasses.execute(dataArray, dataAdapter, "1011")
         liveData.value = dataAdapter
 
     }
-
-    /*fun updateGroupSpinner(spinner_direction: Spinner, spinner_year: Spinner, dataAdapter: ArrayAdapter<String>) {
-        var getGroups = GetGroupsUseCase(repository)
-        var param = GroupData(spinner_direction.selectedItem.toString(), spinner_year.selectedItem.toString())
-        getGroups.execute(dataArray, dataAdapter, param)
-        liveData.value = dataAdapter
-    }*/
 
 }
