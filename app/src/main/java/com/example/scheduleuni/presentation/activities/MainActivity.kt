@@ -1,14 +1,18 @@
 package com.example.scheduleuni.presentation.activities
 
+import android.content.Context
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
+import android.content.SharedPreferences
 import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
 import android.util.Log
 import android.view.View
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.Button
-import androidx.lifecycle.Observer
+import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import com.example.scheduleuni.R
 import com.example.scheduleuni.databinding.ActivityMainBinding
@@ -18,6 +22,7 @@ import com.example.scheduleuni.presentation.viewmodels.ViewModelMain
 class MainActivity : AppCompatActivity() {
 
     lateinit var binding: ActivityMainBinding
+    private var sharedPrefFile = "sharedPrefs"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -25,39 +30,80 @@ class MainActivity : AppCompatActivity() {
         val view = binding.root
         setContentView(view)
 
-        var direction_items = resources.getStringArray(R.array.direction_spinner)
-        var directionAdapter = ArrayAdapter(this, R.layout.direction_item, direction_items)
+        val selectedGroupSharedPreferences = this.getSharedPreferences(sharedPrefFile, Context.MODE_PRIVATE)
+        val editor: SharedPreferences.Editor = selectedGroupSharedPreferences.edit()
+
+        val directionItems = resources.getStringArray(R.array.direction_spinner)
+        val directionAdapter = ArrayAdapter(this, R.layout.direction_item, directionItems)
         binding.directionSpinner.setAdapter(directionAdapter)
 
-        var year_items = resources.getStringArray(R.array.year_spinner)
-        var yearAdapter = ArrayAdapter(this, R.layout.year_item, year_items)
+        val yearItems = resources.getStringArray(R.array.year_spinner)
+        val yearAdapter = ArrayAdapter(this, R.layout.year_item, yearItems)
         binding.year.setAdapter(yearAdapter)
 
         val vm = ViewModelProvider(this, MainViewModelFactory()).get(ViewModelMain::class.java)
         val dataAdapter = ArrayAdapter(this,
             android.R.layout.simple_spinner_dropdown_item, vm.dataArray)
 
-        vm.publicLiveData.observe(this, Observer {
+        vm.publicLiveData.observe(this) {
             binding.group.setAdapter(it)
-        })
+        }
 
-        binding.directionSpinner.onItemClickListener = object :AdapterView.OnItemClickListener{
-
-            override fun onItemClick(p0: AdapterView<*>?, p1: View?, p2: Int, p3: Long) {
+        binding.directionSpinner.onItemClickListener =
+            AdapterView.OnItemClickListener { _, _, p2, _ ->
                 if (binding.year.text != null)
                     vm.updateGroupSpinner(binding.directionSpinner, binding.year, dataAdapter)
+                editor.putInt("direction", binding.directionSpinner.adapter.getItemId(p2).toInt())
+                Log.i("dir",selectedGroupSharedPreferences.getInt("direction", 0).toString())
             }
-        }
 
-        binding.year.onItemClickListener = object : AdapterView.OnItemClickListener{
-            override fun onItemClick(p0: AdapterView<*>?, p1: View?, p2: Int, p3: Long) {
+        binding.year.onItemClickListener =
+            AdapterView.OnItemClickListener { _, _, p2, _ ->
                 if (binding.directionSpinner.text != null)
                     vm.updateGroupSpinner(binding.directionSpinner, binding.year, dataAdapter)
+                editor.putInt("year", binding.year.adapter.getItemId(p2).toInt())
+            }
+
+        binding.group.onItemClickListener =
+            AdapterView.OnItemClickListener { _, _, p2, _ ->
+                editor.putInt("group", binding.group.adapter.getItemId(p2).toInt()) }
+        
+        binding.saveCheckbox.setOnCheckedChangeListener { CompoundButton, isChecked ->
+            if (isChecked){
+                editor.putBoolean("checkBoxState", true)
+                editor.apply()
+                Toast.makeText(this,"Сохранено",Toast.LENGTH_LONG).show()
+            }
+            else{
+                editor.putBoolean("checkBoxState", false)
+                editor.clear()
+                editor.apply()
             }
         }
 
+        if (selectedGroupSharedPreferences.getBoolean("checkBoxState", true)){
 
-        var btn = findViewById<Button>(R.id.btn)
+            val sharedDirection = selectedGroupSharedPreferences.getInt("direction", 0)
+            val sharedYear = selectedGroupSharedPreferences.getInt("year", 0)
+            val sharedGroup = selectedGroupSharedPreferences.getInt("group", 0)
+
+            binding.saveCheckbox.isChecked = selectedGroupSharedPreferences.getBoolean("checkBoxState", false)
+            binding.directionSpinner.setText(
+                binding.directionSpinner.adapter.getItem(sharedDirection).toString(),false)
+            binding.year.setText(
+                binding.year.adapter.getItem(sharedYear).toString(),false)
+
+            vm.updateGroupSpinner(binding.directionSpinner, binding.year, dataAdapter)
+
+            val handler = Handler(Looper.myLooper()!!)
+            handler.postDelayed(Runnable {
+                    binding.group.setText(
+                    binding.group.adapter.getItem(sharedGroup).toString(),false) }, 1200)
+
+        }
+
+
+        val btn = findViewById<Button>(R.id.btn)
         btn.setOnClickListener {
             val intent = Intent(this, ScheduleActivity::class.java)
             intent.putExtra("group_name", binding.group.text)

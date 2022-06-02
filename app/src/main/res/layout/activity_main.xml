@@ -83,6 +83,13 @@
 
         </LinearLayout>
 
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Запомнить"
+            android:textSize="16sp"
+            android:id="@+id/save_checkbox"/>
+
 
         <Button
             android:layout_width="wrap_content"
