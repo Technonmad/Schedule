@@ -1,7 +1,10 @@
 package com.example.scheduleuni.presentation.activities
 
+import android.animation.ObjectAnimator
 import android.os.Bundle
 import android.util.Log
+import android.view.View
+import android.widget.ProgressBar
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.example.scheduleuni.R
@@ -12,16 +15,14 @@ import com.example.scheduleuni.presentation.fragments.TasksFragment
 
 class ScheduleActivity : AppCompatActivity() {
 
-    lateinit var binding : ActivityScheduleBinding
     var bundle = Bundle()
     var group = ""
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         group = intent.extras?.get("group_name").toString()
-        //Log.i("MY", group.toString())
 
-        binding = ActivityScheduleBinding.inflate(layoutInflater)
+        val binding = ActivityScheduleBinding.inflate(layoutInflater)
         setContentView(binding.root)
         binding.navigation.setOnItemSelectedListener {
             when (it.itemId){
@@ -29,6 +30,7 @@ class ScheduleActivity : AppCompatActivity() {
                 R.id.tasks_item -> {loadFragment(TasksFragment())}
                 R.id.settings_item -> {loadFragment(SettingsFragment())}
             }
+
             true
         }
 
@@ -37,6 +39,7 @@ class ScheduleActivity : AppCompatActivity() {
     override fun onStart() {
         super.onStart()
         loadFragment(ScheduleListFragment())
+
     }
 
     private fun loadFragment(fragment: Fragment) {

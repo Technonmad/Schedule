@@ -21,7 +21,8 @@ class FireBaseRepImpl : Repository {
 
         val ref = database.getReference("Groups").child(params.direction).child(params.year)
 
-        listener(ref, list, adapter)
+        if (params.direction != "" && params.year != "")
+            listener(ref, list, adapter)
     }
 
 

@@ -1,9 +1,10 @@
 package com.example.scheduleuni.presentation.viewmodels
 
-import android.R
+import android.content.Context
+import android.content.SharedPreferences
 import android.widget.ArrayAdapter
 import android.widget.AutoCompleteTextView
-import android.widget.Spinner
+import android.widget.CheckBox
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -15,7 +16,7 @@ class ViewModelMain: ViewModel() {
 
 
     private val liveData = MutableLiveData<ArrayAdapter<String>>()
-    val publicLiveData: LiveData<ArrayAdapter<String>> = liveData
+    var publicLiveData: LiveData<ArrayAdapter<String>> = liveData
 
 
     var repository = FireBaseRepImpl()
@@ -27,5 +28,4 @@ class ViewModelMain: ViewModel() {
         getGroups.execute(dataArray, dataAdapter, param)
         liveData.value = dataAdapter
     }
-
 }

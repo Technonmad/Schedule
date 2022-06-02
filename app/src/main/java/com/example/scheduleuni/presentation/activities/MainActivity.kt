@@ -51,16 +51,46 @@ class MainActivity : AppCompatActivity() {
 
         binding.directionSpinner.onItemClickListener =
             AdapterView.OnItemClickListener { _, _, p2, _ ->
-                if (binding.year.text != null)
+
+                if (binding.year.text.toString() != ""){
                     vm.updateGroupSpinner(binding.directionSpinner, binding.year, dataAdapter)
+                    binding.saveCheckbox.isEnabled = true
+                }
+                else{
+                    binding.saveCheckbox.isEnabled = false
+                    binding.group.setText("")
+                    binding.group.setAdapter(null)
+                }
+                if (binding.directionSpinner.text.toString() == "") {
+                    binding.group.setText("")
+                    binding.group.setAdapter(null)
+                }
+                else
+                    binding.saveCheckbox.isEnabled = true
                 editor.putInt("direction", binding.directionSpinner.adapter.getItemId(p2).toInt())
                 Log.i("dir",selectedGroupSharedPreferences.getInt("direction", 0).toString())
             }
 
         binding.year.onItemClickListener =
             AdapterView.OnItemClickListener { _, _, p2, _ ->
-                if (binding.directionSpinner.text != null)
+
+                if (binding.directionSpinner.text.toString() != ""){
                     vm.updateGroupSpinner(binding.directionSpinner, binding.year, dataAdapter)
+                    binding.saveCheckbox.isEnabled = true
+                }
+                else{
+                    binding.saveCheckbox.isEnabled = false
+                    binding.group.setText("")
+                    vm.dataArray.clear()
+                    binding.group.setAdapter(null)
+                }
+                if (binding.year.text.toString() == "") {
+                    binding.group.setText("")
+                    binding.group.setAdapter(null)
+                }
+                else
+                    binding.saveCheckbox.isEnabled = true
+
                 editor.putInt("year", binding.year.adapter.getItemId(p2).toInt())
             }
 
@@ -72,7 +102,6 @@ class MainActivity : AppCompatActivity() {
             if (isChecked){
                 editor.putBoolean("checkBoxState", true)
                 editor.apply()
-                Toast.makeText(this,"Сохранено",Toast.LENGTH_LONG).show()
             }
             else{
                 editor.putBoolean("checkBoxState", false)
@@ -86,6 +115,7 @@ class MainActivity : AppCompatActivity() {
             val sharedDirection = selectedGroupSharedPreferences.getInt("direction", 0)
             val sharedYear = selectedGroupSharedPreferences.getInt("year", 0)
             val sharedGroup = selectedGroupSharedPreferences.getInt("group", 0)
+            binding.saveCheckbox.isEnabled = true
 
             binding.saveCheckbox.isChecked = selectedGroupSharedPreferences.getBoolean("checkBoxState", false)
             binding.directionSpinner.setText(
@@ -105,10 +135,13 @@ class MainActivity : AppCompatActivity() {
 
         val btn = findViewById<Button>(R.id.btn)
         btn.setOnClickListener {
-            val intent = Intent(this, ScheduleActivity::class.java)
-            intent.putExtra("group_name", binding.group.text)
-            //Log.i("MY", binding.group.selectedItem.toString())
-            startActivity(intent)
+            if(binding.group.text.toString() != ""){
+                val intent = Intent(this, ScheduleActivity::class.java)
+                intent.putExtra("group_name", binding.group.text)
+                startActivity(intent)
+            }
+            else
+                Toast.makeText(this, "Для начала заполните поля", Toast.LENGTH_LONG).show()
         }
 
     }
