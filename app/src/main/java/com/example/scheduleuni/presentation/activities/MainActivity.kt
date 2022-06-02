@@ -53,8 +53,10 @@ class MainActivity : AppCompatActivity() {
             AdapterView.OnItemClickListener { _, _, p2, _ ->
 
                 if (binding.year.text.toString() != ""){
+
                     vm.updateGroupSpinner(binding.directionSpinner, binding.year, dataAdapter)
                     binding.saveCheckbox.isEnabled = true
+
                 }
                 else{
                     binding.saveCheckbox.isEnabled = false
@@ -75,6 +77,7 @@ class MainActivity : AppCompatActivity() {
             AdapterView.OnItemClickListener { _, _, p2, _ ->
 
                 if (binding.directionSpinner.text.toString() != ""){
+
                     vm.updateGroupSpinner(binding.directionSpinner, binding.year, dataAdapter)
                     binding.saveCheckbox.isEnabled = true
                 }

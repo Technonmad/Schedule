@@ -23,6 +23,7 @@ class ScheduleListFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        val data = arguments
         _binding = FragmentScheduleListBinding.inflate(inflater, container, false)
         val view = binding.root
         val vm = ViewModelProvider(this, ScheduleFragmentViewModelFactory()).get(ViewModelScheduleFragment::class.java)
@@ -31,9 +32,8 @@ class ScheduleListFragment : Fragment() {
         })
         binding.apply {
             classesRec.layoutManager = LinearLayoutManager(this@ScheduleListFragment.context)
-            vm.getScheduleForGroup()
+            vm.getScheduleForGroup(data!!.get("group_name").toString())
         }
-        val data = arguments
         binding.currentGroup.text = " " + data!!.get("group_name").toString()
         binding.currentWeek.text = " " + vm.getCurrentWeek()
         return view

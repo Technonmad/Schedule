@@ -12,9 +12,9 @@
         android:text="День недели"
         android:textSize="20sp"
         android:textColor="@color/white"
-        android:background="@color/purple_500"
+        android:background="@color/design_default_color_primary_variant"
         android:id="@+id/dayofweekText"
-        android:padding="5sp"/>
+        android:padding="5sp" />
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

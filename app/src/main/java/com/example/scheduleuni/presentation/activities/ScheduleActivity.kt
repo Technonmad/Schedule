@@ -15,7 +15,7 @@ import com.example.scheduleuni.presentation.fragments.TasksFragment
 
 class ScheduleActivity : AppCompatActivity() {
 
-    var bundle = Bundle()
+    private var bundle = Bundle()
     var group = ""
 
     override fun onCreate(savedInstanceState: Bundle?) {

@@ -20,11 +20,11 @@ class ViewModelScheduleFragment: ViewModel() {
     var repository = FireBaseRepImpl()
     var dataArray = ArrayList<ClassesModel>()
 
-    fun getScheduleForGroup(){
+    fun getScheduleForGroup(group: String){
 
         var getClasses = GetClassesUseCase(repository)
         var dataAdapter = ClassesAdapter(dataArray)
-        getClasses.execute(dataArray, dataAdapter, "1011")
+        getClasses.execute(dataArray, dataAdapter, group)
         liveDataSchedule.value = dataAdapter
 
     }
