@@ -4,6 +4,7 @@
     <string name="year_text">Выберите курс</string>
     <string name="current_group_schedule">Текущая группа : </string>
     <string name="current_week_schedule">Текущая неделя : </string>
+    <string name="current_prep">Преподаватель : </string>
     <string-array name="direction_spinner">
         <item></item>
         <item>ФСГН</item>

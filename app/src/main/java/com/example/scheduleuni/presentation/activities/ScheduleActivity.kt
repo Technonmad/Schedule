@@ -39,7 +39,6 @@ class ScheduleActivity : AppCompatActivity() {
     override fun onStart() {
         super.onStart()
         loadFragment(ScheduleListFragment())
-
     }
 
     private fun loadFragment(fragment: Fragment) {

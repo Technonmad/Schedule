@@ -147,6 +147,12 @@ class MainActivity : AppCompatActivity() {
                 Toast.makeText(this, "Для начала заполните поля", Toast.LENGTH_LONG).show()
         }
 
+        val btnPrep = findViewById<Button>(R.id.btnPrep)
+        btnPrep.setOnClickListener {
+            val intent = Intent(this, SchedulePrepActivity::class.java)
+            startActivity(intent)
+        }
+
     }
 
 }

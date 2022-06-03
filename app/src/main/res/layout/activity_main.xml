@@ -9,12 +9,6 @@
     android:orientation="vertical"
     android:background="@drawable/gradient_main">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center"
-        android:orientation="vertical">
-
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -96,8 +90,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/button_text"
-            android:id="@+id/btn"
-            android:layout_marginTop="16dp"/>
+            android:id="@+id/btn" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -107,14 +100,32 @@
             android:textSize="16sp"
             android:layout_marginTop="16dp"/>
 
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_margin="5dp">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            app:helperText="Выберите преподавателя">
+            <AutoCompleteTextView
+                android:id="@+id/preps_spinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:inputType="none"/>
+        </com.google.android.material.textfield.TextInputLayout>
+    </LinearLayout>
+
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/buttonPrep_text"
             android:id="@+id/btnPrep"
-            android:layout_marginTop="16dp"
             style="@style/Widget.MaterialComponents.Button.OutlinedButton"/>
-
-    </LinearLayout>
 
 </LinearLayout>
