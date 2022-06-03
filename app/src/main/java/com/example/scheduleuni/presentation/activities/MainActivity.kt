@@ -45,9 +45,18 @@ class MainActivity : AppCompatActivity() {
         val dataAdapter = ArrayAdapter(this,
             android.R.layout.simple_spinner_dropdown_item, vm.dataArray)
 
+        val prepsAdapter = ArrayAdapter(this,
+            android.R.layout.simple_spinner_dropdown_item, vm.prepsArray)
+
         vm.publicLiveData.observe(this) {
             binding.group.setAdapter(it)
         }
+
+        vm.publicLiveDataPreps.observe(this) {
+            binding.prepsSpinner.setAdapter(it)
+        }
+
+        vm.getPreps(prepsAdapter)
 
         binding.directionSpinner.onItemClickListener =
             AdapterView.OnItemClickListener { _, _, p2, _ ->
@@ -105,22 +114,32 @@ class MainActivity : AppCompatActivity() {
             if (isChecked){
                 editor.putBoolean("checkBoxState", true)
                 editor.apply()
+                editor.commit()
             }
             else{
-                editor.putBoolean("checkBoxState", false)
                 editor.clear()
                 editor.apply()
+                editor.commit()
             }
         }
 
-        if (selectedGroupSharedPreferences.getBoolean("checkBoxState", true)){
+        if (selectedGroupSharedPreferences.all.isNotEmpty()){
+
+//            Log.i("ME", "Прошло")
 
             val sharedDirection = selectedGroupSharedPreferences.getInt("direction", 0)
             val sharedYear = selectedGroupSharedPreferences.getInt("year", 0)
             val sharedGroup = selectedGroupSharedPreferences.getInt("group", 0)
             binding.saveCheckbox.isEnabled = true
 
+//            Log.i("ME", sharedDirection.toString())
+//            Log.i("ME", sharedYear.toString())
+//            Log.i("ME", sharedGroup.toString())
+//            Log.i("ME", selectedGroupSharedPreferences.getBoolean("checkBoxState", false).toString())
+//            Log.i("ME", selectedGroupSharedPreferences.all.toString())
+
             binding.saveCheckbox.isChecked = selectedGroupSharedPreferences.getBoolean("checkBoxState", false)
+
             binding.directionSpinner.setText(
                 binding.directionSpinner.adapter.getItem(sharedDirection).toString(),false)
             binding.year.setText(
@@ -131,7 +150,7 @@ class MainActivity : AppCompatActivity() {
             val handler = Handler(Looper.myLooper()!!)
             handler.postDelayed(Runnable {
                     binding.group.setText(
-                    binding.group.adapter.getItem(sharedGroup).toString(),false) }, 1200)
+                    binding.group.adapter.getItem(sharedGroup).toString(),false) }, 1500)
 
         }
 
@@ -149,8 +168,13 @@ class MainActivity : AppCompatActivity() {
 
         val btnPrep = findViewById<Button>(R.id.btnPrep)
         btnPrep.setOnClickListener {
-            val intent = Intent(this, SchedulePrepActivity::class.java)
-            startActivity(intent)
+            if (binding.prepsSpinner.text.toString() != ""){
+                val intent = Intent(this, SchedulePrepActivity::class.java)
+                intent.putExtra("prep_name", binding.prepsSpinner.text)
+                startActivity(intent)
+            }
+            else
+                Toast.makeText(this, "Выберите преподавателя", Toast.LENGTH_LONG).show()
         }
 
     }

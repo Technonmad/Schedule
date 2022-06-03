@@ -67,7 +67,7 @@
         <TextView
             android:layout_width="80dp"
             android:layout_height="wrap_content"
-            android:id="@+id/class_group1"
+            android:id="@+id/classGroup1"
             android:text="----"
             android:layout_weight="3"
             android:textAlignment="center"
@@ -128,7 +128,7 @@
         <TextView
             android:layout_width="80dp"
             android:layout_height="wrap_content"
-            android:id="@+id/class_group2"
+            android:id="@+id/classGroup2"
             android:text="----"
             android:layout_weight="3"
             android:textAlignment="center"

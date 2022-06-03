@@ -6,8 +6,7 @@ import com.example.scheduleuni.domain.models.ClassesModel
 
 class GetClassesUseCase(private val repository: Repository) {
 
-    fun execute(list: ArrayList<ClassesModel>, adapter: ClassesAdapter, group: String
-    ){
+    fun execute(list: ArrayList<ClassesModel>, adapter: ClassesAdapter, group: String){
         repository.getClasses(list = list, adapter = adapter, group = group)
     }
 

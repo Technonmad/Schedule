@@ -6,29 +6,25 @@
         <entry key="..\:/Users/Anton/AndroidStudioProjects/ScheduleUni/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/Users/Anton/AndroidStudioProjects/ScheduleUni/app/src/main/res/layout/activity_schedule.xml" value="0.18802083333333333" />
         <entry key="..\:/Users/Anton/AndroidStudioProjects/ScheduleUni/app/src/main/res/layout/fragment_schedule_list.xml" value="0.18802083333333333" />
-        <entry key="..\:/Users/Anton/Documents/GitHub/Schedule/app/src/main/res/drawable/gradient_main.xml" value="0.2315" />
-        <entry key="..\:/Users/Anton/Documents/GitHub/Schedule/app/src/main/res/drawable/ic_schedule.xml" value="0.309" />
         <entry key="..\:/Users/Anton/Documents/GitHub/Schedule/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/Users/Anton/Documents/GitHub/Schedule/app/src/main/res/layout/activity_schedule.xml" value="0.18802083333333333" />
-        <entry key="..\:/Users/Anton/Documents/GitHub/Schedule/app/src/main/res/layout/activity_schedule_prep.xml" value="0.36666666666666664" />
-        <entry key="..\:/Users/Anton/Documents/GitHub/Schedule/app/src/main/res/layout/activity_splash.xml" value="0.18802083333333333" />
         <entry key="..\:/Users/Anton/Documents/GitHub/Schedule/app/src/main/res/layout/class_item.xml" value="0.33" />
-        <entry key="..\:/Users/Anton/Documents/GitHub/Schedule/app/src/main/res/layout/class_prep_item.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/Anton/Documents/GitHub/Schedule/app/src/main/res/layout/dayofweek_item.xml" value="0.18802083333333333" />
-        <entry key="..\:/Users/Anton/Documents/GitHub/Schedule/app/src/main/res/layout/direction_item.xml" value="0.36666666666666664" />
-        <entry key="..\:/Users/Anton/Documents/GitHub/Schedule/app/src/main/res/layout/fragment_blank.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/Anton/Documents/GitHub/Schedule/app/src/main/res/layout/fragment_schedule_list.xml" value="0.25" />
-        <entry key="..\:/Users/Anton/Documents/GitHub/Schedule/app/src/main/res/layout/fragment_schedule_prep.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/Anton/Documents/GitHub/Schedule/app/src/main/res/layout/fragment_settings.xml" value="0.358695652173913" />
-        <entry key="..\:/Users/Anton/Documents/GitHub/Schedule/app/src/main/res/layout/year_item.xml" value="0.22447916666666667" />
         <entry key="..\:/Users/Anton/Documents/GitHub/Schedule/app/src/main/res/menu/bottom_nav_menu.xml" value="0.36666666666666664" />
-        <entry key="..\:/Users/Anton/Documents/GitHub/Schedule/app/src/main/res/menu/bottom_nav_menu_prep.xml" value="0.36666666666666664" />
-        <entry key="..\:/Users/Anton/Documents/GitHub/Schedule/app/src/main/res/xml/root_preferences.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/Antony/Desktop/Git/Schedule/app/src/main/res/layout/activity_main.xml" value="0.22826086956521738" />
         <entry key="..\:/Users/Antony/Desktop/Git/Schedule/app/src/main/res/layout/activity_schedule.xml" value="0.22826086956521738" />
+        <entry key="..\:/Users/Antony/Desktop/Git/Schedule/app/src/main/res/layout/activity_schedule_prep.xml" value="0.22826086956521738" />
+        <entry key="..\:/Users/Antony/Desktop/Git/Schedule/app/src/main/res/layout/class_item.xml" value="0.11302083333333333" />
+        <entry key="..\:/Users/Antony/Desktop/Git/Schedule/app/src/main/res/layout/class_prep_item.xml" value="0.22826086956521738" />
+        <entry key="..\:/Users/Antony/Desktop/Git/Schedule/app/src/main/res/layout/fragment_facults.xml" value="0.1" />
+        <entry key="..\:/Users/Antony/Desktop/Git/Schedule/app/src/main/res/layout/fragment_peresdachi.xml" value="0.1" />
         <entry key="..\:/Users/Antony/Desktop/Git/Schedule/app/src/main/res/layout/fragment_schedule_list.xml" value="0.12360688956433637" />
+        <entry key="..\:/Users/Antony/Desktop/Git/Schedule/app/src/main/res/layout/fragment_schedule_prep.xml" value="0.22826086956521738" />
         <entry key="..\:/Users/Antony/Desktop/Git/Schedule/app/src/main/res/layout/fragment_tasks.xml" value="0.11302083333333333" />
         <entry key="..\:/Users/Antony/Desktop/Git/Schedule/app/src/main/res/menu/bottom_nav_menu.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Antony/Desktop/Git/Schedule/app/src/main/res/menu/bottom_nav_menu_prep.xml" value="0.25416666666666665" />
       </map>
     </option>
   </component>

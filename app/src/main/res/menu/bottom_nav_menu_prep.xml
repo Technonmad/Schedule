@@ -8,6 +8,11 @@
         android:id="@+id/schedule_item"/>
     <item
         android:enabled="true"
+        android:icon="@drawable/ic_peresdachi"
+        android:title="Пересдачи"
+        android:id="@+id/peresdachi_item"/>
+    <item
+        android:enabled="true"
         android:icon="@drawable/ic_settings"
         android:title="Настройки"
         android:id="@+id/settings_item"/>

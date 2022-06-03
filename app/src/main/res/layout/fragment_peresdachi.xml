@@ -3,17 +3,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".presentation.activities.ScheduleActivity">
+    tools:context=".presentation.fragments.PeresdachiFragment">
 
     <!-- TODO: Update blank fragment layout -->
     <TextView
         android:layout_margin="40sp"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:text="В разработке!"
+        android:text="@string/peresdachi_text"
         android:gravity="center"
         android:textColor="@color/black"
-        android:textSize="20sp"
-        android:layout_gravity="center"/>
+        android:textSize="20sp"/>
 
 </FrameLayout>

@@ -20,7 +20,9 @@
         <item>4 курс</item>
     </string-array>
     <string name="button_text">Показать расписание</string>
-    <string name="buttonPrep_text">Расписание преподавателей</string>
+    <string name="facults_text">У этого преподавателя нет факультативов</string>
+    <string name="peresdachi_text">У этого преподавателя нет пересдач</string>
+    <string name="buttonPrep_text">Расписание преподавателя</string>
     <string name="group_text">Выберите группу</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>

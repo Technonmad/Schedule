@@ -19,4 +19,5 @@ data class ClassesPrepsModel(
     val group5: String ?= null,
     val class6: String ?= null,
     val room6: String ?= null,
-    val group6: String ?= null,)
+    val group6: String ?= null
+    )
